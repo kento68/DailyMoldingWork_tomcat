@@ -36,6 +36,20 @@
 	String numberdefects9=product == null ? "":String.valueOf(product.getNumberdefects9());
 	String partnumber=product == null ? "":String.valueOf(product.getPartnumber());
 
+	String arrangementnumber_R=product == null ? "":String.valueOf(product.getArrangementnumber_R());
+	String numbernodefectiveproducts_R=product == null ? "":String.valueOf(product.getNumbernodefectiveproducts_R());
+	String totalnumberdefects_R=product == null ? "":String.valueOf(product.getTotalnumberdefects_R());
+	String numberdefects1_R=product == null ? "":String.valueOf(product.getNumberdefects1_R());
+	String numberdefects2_R=product == null ? "":String.valueOf(product.getNumberdefects2_R());
+	String numberdefects3_R=product == null ? "":String.valueOf(product.getNumberdefects3_R());
+	String numberdefects4_R=product == null ? "":String.valueOf(product.getNumberdefects4_R());
+	String numberdefects5_R=product == null ? "":String.valueOf(product.getNumberdefects5_R());
+	String numberdefects6_R=product == null ? "":String.valueOf(product.getNumberdefects6_R());
+	String numberdefects7_R=product == null ? "":String.valueOf(product.getNumberdefects7_R());
+	String numberdefects8_R=product == null ? "":String.valueOf(product.getNumberdefects8_R());
+	String numberdefects9_R=product == null ? "":String.valueOf(product.getNumberdefects9_R());
+	String partnumber_R=product == null ? "":String.valueOf(product.getPartnumber_R());
+	
 	String err=(String)request.getAttribute("err");
 	String msg=(String)request.getAttribute("msg");
 	String arrangementLabel=(String)request.getAttribute("arrangementLabel");
@@ -69,7 +83,7 @@
 
 <div class="container-fluid" style="margin-top:20px;">
 
-<form id="Form" action="<%= request.getContextPath() %>/main" method="post" >
+<form action="<%= request.getContextPath() %>/main2" method="post" >
 
 <header>
 	<ul> 
@@ -86,12 +100,12 @@
     	<button type="button" class="btn btn-primary custom-btn" style="margin-left: 5px; margin-bottom: 5px; padding-top: 1px; padding-bottom: 1px;" id="toggle-language-btn" onclick="toggleLanguage()">Dịch văn bản</button>
     	<% } %>
 	</ul>
-	
+
 <!-- ボタンを押したときにフォームの必須フィールドのバリデーションがトリガーされないようにする  type="button -->
 </header>
 
  <!-- <label for="flag"><b>フラグ:　</b></label> -->
-<input type="hidden" class="form-control" id="flag" name="flag" value="1"required>
+<input type="hidden" class="form-control" id="flag" name="flag" value="2"required>
 <!-- <label for="flag"><b>予備品番1:　</b></label> -->
 <input type="hidden" class="form-control" id="sparepartnumber1" name="sparepartnumber1" value="">
 <!-- <label for="flag"><b>予備品番2:　</b></label> -->
@@ -109,48 +123,24 @@
 <input type="hidden" class="form-control" id="workmantime_R" name="workmantime_R" value="0">
 <!-- <label for="flag"><b>機械時間_R:　</b></label> -->
 <input type="hidden" class="form-control" id="machinetime_R" name="machinetime_R" value="0">
-<!-- <label for="flag"><b>手配番号_R:　</b></label> -->
-<input type="hidden" class="form-control" id="arrangementnumber_R" name="arrangementnumber_R" value="0">
-<!-- <label for="flag"><b>良品数_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numbernodefectiveproducts_R" name="numbernodefectiveproducts_R" value="0">
-<!-- <label for="flag"><b>合計不良数_R:　</b></label> -->
-<input type="hidden" class="form-control" id="totalnumberdefects_R" name="totalnumberdefects_R" value="0">
 <!-- <label for="flag"><b>不良分類コード1_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode1_R" name="defectclassificationcode1_R" value="0">
-<!-- <label for="flag"><b>不良数1_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects1_R" name="numberdefects1_R" value="0">
 <!-- <label for="flag"><b>不良分類コード2_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode2_R" name="defectclassificationcode2_R" value="0">
-<!-- <label for="flag"><b>不良数2_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects2_R" name="numberdefects2_R" value="0">
 <!-- <label for="flag"><b>不良分類コード3_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode3_R" name="defectclassificationcode3_R" value="0">
-<!-- <label for="flag"><b>不良数3_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects3_R" name="numberdefects3_R" value="0">
 <!-- <label for="flag"><b>不良分類コード4_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode4_R" name="defectclassificationcode4_R" value="0">
-<!-- <label for="flag"><b>不良数4_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects4_R" name="numberdefects4_R" value="0">
 <!-- <label for="flag"><b>不良分類コード5_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode5_R" name="defectclassificationcode5_R" value="0">
-<!-- <label for="flag"><b>不良数5_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects5_R" name="numberdefects5_R" value="0">
 <!-- <label for="flag"><b>不良分類コード6_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode6_R" name="defectclassificationcode6_R" value="0">
-<!-- <label for="flag"><b>不良数6_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects6_R" name="numberdefects6_R" value="0">
 <!-- <label for="flag"><b>不良分類コード7_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode7_R" name="defectclassificationcode7_R" value="0">
-<!-- <label for="flag"><b>不良数7_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects7_R" name="numberdefects7_R" value="0">
 <!-- <label for="flag"><b>不良分類コード8_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode8_R" name="defectclassificationcode8_R" value="0">
-<!-- <label for="flag"><b>不良数8_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects8_R" name="numberdefects8_R" value="0">
 <!-- <label for="flag"><b>不良分類コード9_R:　</b></label> -->
 <input type="hidden" class="form-control" id="defectclassificationcode9_R" name="defectclassificationcode9_R" value="0">
-<!-- <label for="flag"><b>不良数9_R:　</b></label> -->
-<input type="hidden" class="form-control" id="numberdefects9_R" name="numberdefects9_R" value="0">
 <!-- <label for="flag"><b>予備品番1_R:　</b></label> -->
 <input type="hidden" class="form-control" id="sparepartnumber1_R" name="sparepartnumber1_R" value="">
 <!-- <label for="flag"><b>予備品番2_R:　</b></label> -->
@@ -163,8 +153,6 @@
 <input type="hidden" class="form-control" id="sparenumberdefects2_R" name="sparenumberdefects2_R" value="">
 <!-- <label for="flag"><b>予備不良数3_R:　</b></label> -->
 <input type="hidden" class="form-control" id="sparenumberdefects3_R" name="sparenumberdefects3_R" value="">
-<!-- <label for="flag"><b>品番_R　:　</b></label> -->
-<input type="hidden" class="form-control" id="partnumber_R" name="partnumber_R" value="0">
 
 <div class="form-row">
   <div class="form-group col-sm-6">
@@ -174,20 +162,26 @@
 </div>
 
 <div class="form-row">
-  <div class="form-group col-sm-6">
-    <label for="arrangementnumber" class="required-label" id="arrangementnumber_label"><b>手配番号　:</b></label>
+	<div class="form-group col-sm-6">
+    <label for="arrangementnumber" class="required-label" id="arrangementnumber_label"><b>手配番号　:</b> </label>
     <input 
       type="number" class="form-control" id="arrangementnumber" 
-      name="arrangementnumber" placeholder="手配番号を入力してください" required>
-      ✅ 更新の際は、手配番号を一度削除して再入力して下さい。
+      name="arrangementnumber" placeholder="LH(LWR):手配番号を入力してください" required>
+      <input 
+      type="number" class="form-control" id="arrangementnumber_R" 
+      name="arrangementnumber_R" placeholder="RH(UPR):手配番号を入力してください" required>
+      <% if(loginUser != null) {%> ✅ 更新の際は、LH(LWR) RH(UPR)の手配番号を一度削除して再入力して下さい。 <% } %>
   </div>
   
   <div class="form-group col-sm-6">
     <label for="partnumber" class="required-label" id="partnumber_label"><b>品番　　　:</b></label>
     <input 
-      type="text" class="form-control" id="partnumber" name="partnumber" placeholder="手配番号入力後、手配番号と合致する品番が表示されます"  disabled >
-     <div id="partnumber_errmessage" style="color: red; display: none;">手配番号と合致する品番がありません</div>
-     <% if(loginUser != null) {%> ✅ 手配番号を再入力した際、品番が更新されたか確認して下さい。 <% } %>
+      type="text" class="form-control" id="partnumber" name="partnumber" placeholder="LH(LWR):手配番号入力後、手配番号と合致する品番が表示されます"  disabled >
+     <div id="partnumber_errmessage" style="color: red; display: none;">LH(LWR):手配番号と合致する品番がありません</div>
+    <input 
+      type="text" class="form-control" id="partnumber_R" name="partnumber_R" placeholder="RH(UPR):手配番号入力後、手配番号と合致する品番が表示されます"  disabled >
+     <div id="partnumber_R_errmessage" style="color: red; display: none;">RH(UPR):手配番号と合致する品番がありません</div>
+     <% if(loginUser != null) {%> ✅ 手配番号を再入力した際、LH(LWR) RH(UPR)の品番が更新されたか確認して下さい。 <% } %>
   </div>
 </div>
 
@@ -207,7 +201,7 @@
 	<div class="radio-inline">
 		<input type="radio" name="workinghours" id="radio1a" value="日勤" required>
         <label for="radio1a" id="radio1a_label">昼勤</label>
-        <input type="radio" name="workinghours" id="radio1b" value="夜勤" required>
+        <input type="radio" name="workinghours" id="radio1b" value="夜勤"required>
         <label for="radio1b" id="radio1b_label">夜勤</label>
     </div>
 </div>
@@ -220,7 +214,7 @@
  <div class="form-group col-sm-6">
  	<label for="machinecode" class="required-label" id="machinecode_label"><b>機械コード:</b></label>
  		<select class="form-control" name="machinecode" value="<%=machinecode%>" required>
- 		<option  id="machinecode_comment" value=''>機械コードを選択してください</option>
+ 		<option value='' id="machinecode_comment" >機械コードを選択してください</option>
         <option value="P1">P-1</option>	
         <option value="P2">P-2</option>	
         <option value="P3">P-3</option>	
@@ -273,11 +267,13 @@
 <div class="form-row">
   <div class="form-group col-sm-6">
  	<label for="numbernodefectiveproducts" class="required-label" id="numbernodefectiveproducts_label"><b>良品数　　:</b></label>
- 	<input type="number" class="form-control" id="numbernodefectiveproducts" name="numbernodefectiveproducts" value="<%=numbernodefectiveproducts%>" placeholder="良品数を入力してください" required>
+ 	<input type="number" class="form-control" id="numbernodefectiveproducts" name="numbernodefectiveproducts" value="<%=numbernodefectiveproducts%>" placeholder="LH(LWR):良品数を入力してください" required>
+ 	<input type="number" class="form-control" id="numbernodefectiveproducts_R" name="numbernodefectiveproducts_R" value="<%=numbernodefectiveproducts_R%>" placeholder="RH(UPR):良品数を入力してください" required>
  </div>
  <div class="form-group col-sm-6">
  	<label for="totalnumberdefects" class="required-label" id="totalnumberdefects_label"><b>合計不良数:</b></label>
- 	<input type="number" class="form-control" id="totalnumberdefects" name="totalnumberdefects" value="<%=totalnumberdefects%>" placeholder="不良数1～9を入力してください" required disabled>
+ 	<input type="number" class="form-control" id="totalnumberdefects" name="totalnumberdefects" value="<%=totalnumberdefects%>" placeholder="LH(LWR):不良数1～9を入力してください" required disabled>
+ 	<input type="number" class="form-control" id="totalnumberdefects_R" name="totalnumberdefects_R" value="<%=totalnumberdefects_R%>" placeholder="RH(UPR):不良数1～9を入力してください" required disabled>
  </div>
 </div>
 
@@ -293,7 +289,8 @@
  </div>
  <div class="form-group col-sm-6">
  	<label for="numberdefects1" class="required-label" id="numberdefects1_label"><b>不良数1:</b></label>
- 	<input type="number" class="form-control defect-number" id="numberdefects1" name="numberdefects1" value="<%=numberdefects1%>" placeholder="不良数を入力してください" required>
+ 	<input type="number" class="form-control defect-number" id="numberdefects1" name="numberdefects1" value="<%=numberdefects1%>" placeholder="LH(LWR):不良数を入力してください" required>
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects1_R" name="numberdefects1_R" value="<%=numberdefects1_R%>" placeholder="RH(UPR):不良数を入力してください" required>
  </div>
 </div>
  <div class="form-row">
@@ -303,7 +300,8 @@
  </div>
  <div class="form-group col-sm-6">
  	<label for="numberdefects2" class="required-label" id="numberdefects2_label"><b>不良数2:</b></label>
- 	<input type="number" class="form-control defect-number" id="numberdefects2" name="numberdefects2" value="<%=numberdefects2%>" placeholder="不良数を入力してください" required>
+ 	<input type="number" class="form-control defect-number" id="numberdefects2" name="numberdefects2" value="<%=numberdefects2%>" placeholder="LH(LWR):不良数を入力してください" required>
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects2_R" name="numberdefects2_R" value="<%=numberdefects2_R%>" placeholder="RH(UPR):不良数を入力してください" required>
  </div>
 </div>
  <div class="form-row">
@@ -313,7 +311,8 @@
  </div>
  <div class="form-group col-sm-6">
  	<label for="numberdefects3" class="required-label" id="numberdefects3_label"><b>不良数3:</b></label>
- 	<input type="number" class="form-control defect-number" id="numberdefects3" name="numberdefects3" value="<%=numberdefects3%>" placeholder="不良数を入力してください" required>
+ 	<input type="number" class="form-control defect-number" id="numberdefects3" name="numberdefects3" value="<%=numberdefects3%>" placeholder="LH(LWR):不良数を入力してください" required>
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects3_R" name="numberdefects3_R" value="<%=numberdefects3_R%>" placeholder="RH(UPR):不良数を入力してください" required>
  </div>
 </div>
 
@@ -372,8 +371,9 @@
     </select>
  </div>
  <div class="form-group col-sm-6">
- 	<label for="numberdefects4" id="numberdefects4_label"><b>不良数4:</b></label>
+ 	<label for="numberdefects4"  id="numberdefects4_label"><b>不良数4:</b></label>
  	<input type="number" class="form-control defect-number" id="numberdefects4" name="numberdefects4" value="<%=numberdefects4%>">
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects4_R" name="numberdefects4_R" value="<%=numberdefects4_R%>">
  </div>
 </div>
 <div class="form-row">
@@ -433,6 +433,7 @@
  <div class="form-group col-sm-6">
  	<label for="numberdefects5" id="numberdefects5_label"><b>不良数5:</b></label>
  	<input type="number" class="form-control defect-number" id="numberdefects5" name="numberdefects5" value="<%=numberdefects5%>">
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects5_R" name="numberdefects5_R" value="<%=numberdefects5_R%>">
  </div>
 </div>
 <div class="form-row">
@@ -492,6 +493,7 @@
  <div class="form-group col-sm-6">
  	<label for="numberdefects6" id="numberdefects6_label"><b>不良数6:</b></label>
  	<input type="number" class="form-control defect-number" id="numberdefects6" name="numberdefects6" value="<%=numberdefects6%>">
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects6_R" name="numberdefects6_R" value="<%=numberdefects6_R%>">
  </div>
 </div>
 <div class="form-row">
@@ -551,6 +553,7 @@
  <div class="form-group col-sm-6">
  	<label for="numberdefects7" id="numberdefects7_label"><b>不良数7:</b></label>
  	<input type="number" class="form-control defect-number" id="numberdefects7" name="numberdefects7" value="<%=numberdefects7%>">
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects7_R" name="numberdefects7_R" value="<%=numberdefects7_R%>">
  </div>
 </div>
 <div class="form-row">
@@ -558,7 +561,7 @@
  	<label for="defectclassificationcode8" id="defectclassificationcode8_label"><b>不良分類コード8:</b></label>
  		<select class="form-control" name="defectclassificationcode8" id="defectclassificationcode8">
         <option value=""></option>
-         <option value="1001">1001:異物(黒･混入･ｱｸﾘﾙ･樹脂ｶｽ)</option>
+        <option value="1001">1001:異物(黒･混入･ｱｸﾘﾙ･樹脂ｶｽ)</option>
         <option value="1002">1002:ｼｮｰﾄ</option>
         <option value="1003">1003:ﾃｶﾘ</option>
         <option value="1004">1004:ｷｬﾋﾞﾄﾗﾚ</option>
@@ -610,6 +613,7 @@
  <div class="form-group col-sm-6">
  	<label for="numberdefects8" id="numberdefects8_label"><b>不良数8:</b></label>
  	<input type="number" class="form-control defect-number" id="numberdefects8" name="numberdefects8" value="<%=numberdefects8%>">
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects8_R" name="numberdefects8_R" value="<%=numberdefects8_R%>">
  </div>
 </div>
 <div class="form-row">
@@ -669,6 +673,7 @@
  <div class="form-group col-sm-6">
  	<label for="numberdefects9" id="numberdefects9_label"><b>不良数9:</b></label>
  	<input type="number" class="form-control defect-number" id="numberdefects9" name="numberdefects9" value="<%=numberdefects9%>">
+ 	<input type="number" class="form-control defect-number_R" id="numberdefects9_R" name="numberdefects9_R" value="<%=numberdefects9_R%>">
  </div>
 </div>
 
@@ -677,8 +682,7 @@
 <%if(!id.isEmpty()) {%>
 <input type="hidden" name="id" value="<%=id %>">
 <%} %>
-
-<button type="submit" class="btn btn-primary custom-btn" id="registration" style="margin-left: 15px;" onclick="submitForm(event)"><%=id.isEmpty()?"登録":"更新" %></button>
+<button type="submit" class="btn btn-primary custom-btn" id="registration" style="margin-left: 15px;" onclick="submitForm()"><%=id.isEmpty()?"登録":"更新" %></button>
  
 <footer>
 	<ul>
@@ -725,6 +729,20 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         // 初期値が存在する場合は対応するオプションを選択
         selectElement.value = partnumberValue;
+    }
+});
+
+<!-- 品番_R:初期値に基づいて分岐 -->
+document.addEventListener('DOMContentLoaded', function () {
+	var partnumber_RValue = '<%=partnumber_R%>';
+    var selectElement = document.getElementsByName('partnumber_R')[0]; 
+
+    // 初期値が空の場合は何も選択しない
+    if (!partnumber_RValue) {
+        selectElement.value = '';
+    } else {
+        // 初期値が存在する場合は対応するオプションを選択
+        selectElement.value = partnumber_RValue;
     }
 });
 
@@ -852,21 +870,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!-- 不良分類コード4 & 不良数4:入力制御 -->
 document.addEventListener('DOMContentLoaded', function () {
-    // 不良分類コード4と不良数4の初期値を取得
+    // 不良分類コード4と不良数4、不良数4_Rの初期値を取得
     var defectClassificationCode4Select = document.getElementsByName('defectclassificationcode4')[0];
     var numberDefects4Input = document.getElementById('numberdefects4');
+    var numberDefects4_R_Input = document.getElementById('numberdefects4_R');
 
     // 不良分類コード4が変更されたときのイベントリスナーを追加
     defectClassificationCode4Select.addEventListener('input', function () {
         // 不良分類コード4の選択値を取得
         var selectedDefectClassificationCode4 = defectClassificationCode4Select.value;
 
-        // 不良分類コード4が選択された場合、関連する不良数4の入力を必須にする
+        // 不良分類コード4が選択された場合、関連する不良数4と不良数4_Rの入力を必須にする
         if (selectedDefectClassificationCode4) {
             numberDefects4Input.required = true;
+            numberDefects4_R_Input.required = true;
         } else {
-            // 不良分類コード4が未選択になった場合、関連する不良数4の入力を必須解除
+            // 不良分類コード4が未選択になった場合、関連する不良数4と不良数4_Rの入力を必須解除
             numberDefects4Input.required = false;
+            numberDefects4_R_Input.required = false;
         }
     });
 
@@ -875,42 +896,70 @@ document.addEventListener('DOMContentLoaded', function () {
         // 不良数4の入力値を取得
         var inputNumberDefects4 = numberDefects4Input.value;
 
-        // 不良数4が入力された場合、関連する不良分類コード4の選択を必須にする
+        // 不良数4が入力された場合、関連する不良分類コード4の選択と不良数4_Rの入力を必須にする
         if (inputNumberDefects4) {
             defectClassificationCode4Select.required = true;
+            numberDefects4_R_Input.required = true;
         } else {
-            // 不良数4が未入力になった場合、関連する不良分類コード4の選択を必須解除
+            // 不良数4が未入力になった場合、関連する不良分類コード4の選択と不良数4_Rの入力を必須解除
             defectClassificationCode4Select.required = false;
+            numberDefects4_R_Input.required = false;
+        }
+    });
+
+    // 不良数4_Rが変更されたときのイベントリスナーを追加
+    numberDefects4_R_Input.addEventListener('input', function () {
+        // 不良数4_Rの入力値を取得
+        var inputNumberDefects4_R = numberDefects4_R_Input.value;
+
+        // 不良数4_Rが入力された場合、関連する不良分類コード4の選択と不良数4の入力を必須にする
+        if (inputNumberDefects4_R) {
+            defectClassificationCode4Select.required = true;
+            numberDefects4Input.required = true;
+        } else {
+            // 不良数4_Rが未入力になった場合、関連する不良分類コード4の選択と不良数4の入力を必須解除
+            defectClassificationCode4Select.required = false;
+            numberDefects4Input.required = false;
         }
     });
 
     // 初期値が存在する場合は初回チェックを行う
     if (defectClassificationCode4Select.value) {
         numberDefects4Input.required = true;
+        numberDefects4_R_Input.required = true;
     }
 
     if (numberDefects4Input.value) {
         defectClassificationCode4Select.required = true;
+        numberDefects4_R_Input.required = true;
+    }
+
+    if (numberDefects4_R_Input.value) {
+        defectClassificationCode4Select.required = true;
+        numberDefects4Input.required = true;
     }
 });
 
 <!-- 不良分類コード5 & 不良数5:入力制御 -->
 document.addEventListener('DOMContentLoaded', function () {
-    // 不良分類コード5と不良数5の初期値を取得
+    // 不良分類コード5と不良数5、不良数5_Rの初期値を取得
     var defectClassificationCode5Select = document.getElementsByName('defectclassificationcode5')[0];
     var numberDefects5Input = document.getElementById('numberdefects5');
+    var numberDefects5_R_Input = document.getElementById('numberdefects5_R');
 
     // 不良分類コード5が変更されたときのイベントリスナーを追加
     defectClassificationCode5Select.addEventListener('input', function () {
         // 不良分類コード5の選択値を取得
         var selectedDefectClassificationCode5 = defectClassificationCode5Select.value;
 
-        // 不良分類コード5が選択された場合、関連する不良数5の入力を必須にする
+        // 不良分類コード5が選択された場合、関連する不良数5と不良数5_Rの入力を必須にする
         if (selectedDefectClassificationCode5) {
             numberDefects5Input.required = true;
+            numberDefects5_R_Input.required = true;
         } else {
-            // 不良分類コード5が未選択になった場合、関連する不良数5の入力を必須解除
+            // 不良分類コード5が未選択になった場合、関連する不良数5と不良数5_Rの入力を必須解除
             numberDefects5Input.required = false;
+            numberDefects5_R_Input.required = false;
         }
     });
 
@@ -919,42 +968,70 @@ document.addEventListener('DOMContentLoaded', function () {
         // 不良数5の入力値を取得
         var inputNumberDefects5 = numberDefects5Input.value;
 
-        // 不良数5が入力された場合、関連する不良分類コード5の選択を必須にする
+        // 不良数5が入力された場合、関連する不良分類コード5の選択と不良数5_Rの入力を必須にする
         if (inputNumberDefects5) {
             defectClassificationCode5Select.required = true;
+            numberDefects5_R_Input.required = true;
         } else {
-            // 不良数5が未入力になった場合、関連する不良分類コード5の選択を必須解除
+            // 不良数5が未入力になった場合、関連する不良分類コード5の選択と不良数5_Rの入力を必須解除
             defectClassificationCode5Select.required = false;
+            numberDefects5_R_Input.required = false;
+        }
+    });
+
+    // 不良数5_Rが変更されたときのイベントリスナーを追加
+    numberDefects5_R_Input.addEventListener('input', function () {
+        // 不良数5_Rの入力値を取得
+        var inputNumberDefects5_R = numberDefects5_R_Input.value;
+
+        // 不良数5_Rが入力された場合、関連する不良分類コード5の選択と不良数5の入力を必須にする
+        if (inputNumberDefects5_R) {
+            defectClassificationCode5Select.required = true;
+            numberDefects5Input.required = true;
+        } else {
+            // 不良数5_Rが未入力になった場合、関連する不良分類コード5の選択と不良数5の入力を必須解除
+            defectClassificationCode5Select.required = false;
+            numberDefects5Input.required = false;
         }
     });
 
     // 初期値が存在する場合は初回チェックを行う
     if (defectClassificationCode5Select.value) {
         numberDefects5Input.required = true;
+        numberDefects5_R_Input.required = true;
     }
 
     if (numberDefects5Input.value) {
         defectClassificationCode5Select.required = true;
+        numberDefects5_R_Input.required = true;
+    }
+
+    if (numberDefects5_R_Input.value) {
+        defectClassificationCode5Select.required = true;
+        numberDefects5Input.required = true;
     }
 });
 
 <!-- 不良分類コード6 & 不良数6:入力制御 -->
 document.addEventListener('DOMContentLoaded', function () {
-    // 不良分類コード6と不良数6の初期値を取得
+    // 不良分類コード6と不良数6、不良数6_Rの初期値を取得
     var defectClassificationCode6Select = document.getElementsByName('defectclassificationcode6')[0];
     var numberDefects6Input = document.getElementById('numberdefects6');
+    var numberDefects6_R_Input = document.getElementById('numberdefects6_R');
 
     // 不良分類コード6が変更されたときのイベントリスナーを追加
     defectClassificationCode6Select.addEventListener('input', function () {
         // 不良分類コード6の選択値を取得
         var selectedDefectClassificationCode6 = defectClassificationCode6Select.value;
 
-        // 不良分類コード6が選択された場合、関連する不良数6の入力を必須にする
+        // 不良分類コード6が選択された場合、関連する不良数6と不良数6_Rの入力を必須にする
         if (selectedDefectClassificationCode6) {
             numberDefects6Input.required = true;
+            numberDefects6_R_Input.required = true;
         } else {
-            // 不良分類コード6が未選択になった場合、関連する不良数6の入力を必須解除
+            // 不良分類コード6が未選択になった場合、関連する不良数6と不良数6_Rの入力を必須解除
             numberDefects6Input.required = false;
+            numberDefects6_R_Input.required = false;
         }
     });
 
@@ -963,42 +1040,70 @@ document.addEventListener('DOMContentLoaded', function () {
         // 不良数6の入力値を取得
         var inputNumberDefects6 = numberDefects6Input.value;
 
-        // 不良数6が入力された場合、関連する不良分類コード6の選択を必須にする
+        // 不良数6が入力された場合、関連する不良分類コード6の選択と不良数6_Rの入力を必須にする
         if (inputNumberDefects6) {
             defectClassificationCode6Select.required = true;
+            numberDefects6_R_Input.required = true;
         } else {
-            // 不良数6が未入力になった場合、関連する不良分類コード6の選択を必須解除
+            // 不良数6が未入力になった場合、関連する不良分類コード6の選択と不良数6_Rの入力を必須解除
             defectClassificationCode6Select.required = false;
+            numberDefects6_R_Input.required = false;
+        }
+    });
+
+    // 不良数6_Rが変更されたときのイベントリスナーを追加
+    numberDefects6_R_Input.addEventListener('input', function () {
+        // 不良数6_Rの入力値を取得
+        var inputNumberDefects6_R = numberDefects6_R_Input.value;
+
+        // 不良数6_Rが入力された場合、関連する不良分類コード6の選択と不良数6の入力を必須にする
+        if (inputNumberDefects6_R) {
+            defectClassificationCode6Select.required = true;
+            numberDefects6Input.required = true;
+        } else {
+            // 不良数6_Rが未入力になった場合、関連する不良分類コード6の選択と不良数6の入力を必須解除
+            defectClassificationCode6Select.required = false;
+            numberDefects6Input.required = false;
         }
     });
 
     // 初期値が存在する場合は初回チェックを行う
     if (defectClassificationCode6Select.value) {
         numberDefects6Input.required = true;
+        numberDefects6_R_Input.required = true;
     }
 
     if (numberDefects6Input.value) {
         defectClassificationCode6Select.required = true;
+        numberDefects6_R_Input.required = true;
+    }
+
+    if (numberDefects6_R_Input.value) {
+        defectClassificationCode6Select.required = true;
+        numberDefects6Input.required = true;
     }
 });
 
 <!-- 不良分類コード7 & 不良数7:入力制御 -->
 document.addEventListener('DOMContentLoaded', function () {
-    // 不良分類コード7と不良数7の初期値を取得
+    // 不良分類コード7と不良数7、不良数7_Rの初期値を取得
     var defectClassificationCode7Select = document.getElementsByName('defectclassificationcode7')[0];
     var numberDefects7Input = document.getElementById('numberdefects7');
+    var numberDefects7_R_Input = document.getElementById('numberdefects7_R');
 
     // 不良分類コード7が変更されたときのイベントリスナーを追加
     defectClassificationCode7Select.addEventListener('input', function () {
         // 不良分類コード7の選択値を取得
         var selectedDefectClassificationCode7 = defectClassificationCode7Select.value;
 
-        // 不良分類コード7が選択された場合、関連する不良数7の入力を必須にする
+        // 不良分類コード7が選択された場合、関連する不良数7と不良数7_Rの入力を必須にする
         if (selectedDefectClassificationCode7) {
             numberDefects7Input.required = true;
+            numberDefects7_R_Input.required = true;
         } else {
-            // 不良分類コード7が未選択になった場合、関連する不良数7の入力を必須解除
+            // 不良分類コード7が未選択になった場合、関連する不良数7と不良数7_Rの入力を必須解除
             numberDefects7Input.required = false;
+            numberDefects7_R_Input.required = false;
         }
     });
 
@@ -1007,42 +1112,70 @@ document.addEventListener('DOMContentLoaded', function () {
         // 不良数7の入力値を取得
         var inputNumberDefects7 = numberDefects7Input.value;
 
-        // 不良数7が入力された場合、関連する不良分類コード7の選択を必須にする
+        // 不良数7が入力された場合、関連する不良分類コード7の選択と不良数7_Rの入力を必須にする
         if (inputNumberDefects7) {
             defectClassificationCode7Select.required = true;
+            numberDefects7_R_Input.required = true;
         } else {
-            // 不良数7が未入力になった場合、関連する不良分類コード7の選択を必須解除
+            // 不良数7が未入力になった場合、関連する不良分類コード7の選択と不良数7_Rの入力を必須解除
             defectClassificationCode7Select.required = false;
+            numberDefects7_R_Input.required = false;
+        }
+    });
+
+    // 不良数7_Rが変更されたときのイベントリスナーを追加
+    numberDefects7_R_Input.addEventListener('input', function () {
+        // 不良数7_Rの入力値を取得
+        var inputNumberDefects7_R = numberDefects7_R_Input.value;
+
+        // 不良数7_Rが入力された場合、関連する不良分類コード7の選択と不良数7の入力を必須にする
+        if (inputNumberDefects7_R) {
+            defectClassificationCode7Select.required = true;
+            numberDefects7Input.required = true;
+        } else {
+            // 不良数7_Rが未入力になった場合、関連する不良分類コード7の選択と不良数7の入力を必須解除
+            defectClassificationCode7Select.required = false;
+            numberDefects7Input.required = false;
         }
     });
 
     // 初期値が存在する場合は初回チェックを行う
     if (defectClassificationCode7Select.value) {
         numberDefects7Input.required = true;
+        numberDefects7_R_Input.required = true;
     }
 
     if (numberDefects7Input.value) {
         defectClassificationCode7Select.required = true;
+        numberDefects7_R_Input.required = true;
+    }
+
+    if (numberDefects7_R_Input.value) {
+        defectClassificationCode7Select.required = true;
+        numberDefects7Input.required = true;
     }
 });
 
 <!-- 不良分類コード8 & 不良数8:入力制御 -->
 document.addEventListener('DOMContentLoaded', function () {
-    // 不良分類コード8と不良数8の初期値を取得
+    // 不良分類コード8と不良数8、不良数8_Rの初期値を取得
     var defectClassificationCode8Select = document.getElementsByName('defectclassificationcode8')[0];
     var numberDefects8Input = document.getElementById('numberdefects8');
+    var numberDefects8_R_Input = document.getElementById('numberdefects8_R');
 
     // 不良分類コード8が変更されたときのイベントリスナーを追加
     defectClassificationCode8Select.addEventListener('input', function () {
         // 不良分類コード8の選択値を取得
         var selectedDefectClassificationCode8 = defectClassificationCode8Select.value;
 
-        // 不良分類コード8が選択された場合、関連する不良数8の入力を必須にする
+        // 不良分類コード8が選択された場合、関連する不良数8と不良数8_Rの入力を必須にする
         if (selectedDefectClassificationCode8) {
             numberDefects8Input.required = true;
+            numberDefects8_R_Input.required = true;
         } else {
-            // 不良分類コード8が未選択になった場合、関連する不良数8の入力を必須解除
+            // 不良分類コード8が未選択になった場合、関連する不良数8と不良数8_Rの入力を必須解除
             numberDefects8Input.required = false;
+            numberDefects8_R_Input.required = false;
         }
     });
 
@@ -1051,42 +1184,70 @@ document.addEventListener('DOMContentLoaded', function () {
         // 不良数8の入力値を取得
         var inputNumberDefects8 = numberDefects8Input.value;
 
-        // 不良数8が入力された場合、関連する不良分類コード8の選択を必須にする
+        // 不良数8が入力された場合、関連する不良分類コード8の選択と不良数8_Rの入力を必須にする
         if (inputNumberDefects8) {
             defectClassificationCode8Select.required = true;
+            numberDefects8_R_Input.required = true;
         } else {
-            // 不良数8が未入力になった場合、関連する不良分類コード8の選択を必須解除
+            // 不良数8が未入力になった場合、関連する不良分類コード8の選択と不良数8_Rの入力を必須解除
             defectClassificationCode8Select.required = false;
+            numberDefects8_R_Input.required = false;
+        }
+    });
+
+    // 不良数8_Rが変更されたときのイベントリスナーを追加
+    numberDefects8_R_Input.addEventListener('input', function () {
+        // 不良数8_Rの入力値を取得
+        var inputNumberDefects8_R = numberDefects8_R_Input.value;
+
+        // 不良数8_Rが入力された場合、関連する不良分類コード8の選択と不良数8の入力を必須にする
+        if (inputNumberDefects8_R) {
+            defectClassificationCode8Select.required = true;
+            numberDefects8Input.required = true;
+        } else {
+            // 不良数8_Rが未入力になった場合、関連する不良分類コード8の選択と不良数8の入力を必須解除
+            defectClassificationCode8Select.required = false;
+            numberDefects8Input.required = false;
         }
     });
 
     // 初期値が存在する場合は初回チェックを行う
     if (defectClassificationCode8Select.value) {
         numberDefects8Input.required = true;
+        numberDefects8_R_Input.required = true;
     }
 
     if (numberDefects8Input.value) {
         defectClassificationCode8Select.required = true;
+        numberDefects8_R_Input.required = true;
+    }
+
+    if (numberDefects8_R_Input.value) {
+        defectClassificationCode8Select.required = true;
+        numberDefects8Input.required = true;
     }
 });
 
 <!-- 不良分類コード9 & 不良数9:入力制御 -->
 document.addEventListener('DOMContentLoaded', function () {
-    // 不良分類コード9と不良数9の初期値を取得
+    // 不良分類コード9と不良数9、不良数9_Rの初期値を取得
     var defectClassificationCode9Select = document.getElementsByName('defectclassificationcode9')[0];
     var numberDefects9Input = document.getElementById('numberdefects9');
+    var numberDefects9_R_Input = document.getElementById('numberdefects9_R');
 
     // 不良分類コード9が変更されたときのイベントリスナーを追加
     defectClassificationCode9Select.addEventListener('input', function () {
         // 不良分類コード9の選択値を取得
         var selectedDefectClassificationCode9 = defectClassificationCode9Select.value;
 
-        // 不良分類コード9が選択された場合、関連する不良数9の入力を必須にする
+        // 不良分類コード9が選択された場合、関連する不良数9と不良数9_Rの入力を必須にする
         if (selectedDefectClassificationCode9) {
             numberDefects9Input.required = true;
+            numberDefects9_R_Input.required = true;
         } else {
-            // 不良分類コード9が未選択になった場合、関連する不良数9の入力を必須解除
+            // 不良分類コード9が未選択になった場合、関連する不良数9と不良数9_Rの入力を必須解除
             numberDefects9Input.required = false;
+            numberDefects9_R_Input.required = false;
         }
     });
 
@@ -1095,26 +1256,51 @@ document.addEventListener('DOMContentLoaded', function () {
         // 不良数9の入力値を取得
         var inputNumberDefects9 = numberDefects9Input.value;
 
-        // 不良数9が入力された場合、関連する不良分類コード9の選択を必須にする
+        // 不良数9が入力された場合、関連する不良分類コード9の選択と不良数9_Rの入力を必須にする
         if (inputNumberDefects9) {
             defectClassificationCode9Select.required = true;
+            numberDefects9_R_Input.required = true;
         } else {
-            // 不良数9が未入力になった場合、関連する不良分類コード9の選択を必須解除
+            // 不良数9が未入力になった場合、関連する不良分類コード9の選択と不良数9_Rの入力を必須解除
             defectClassificationCode9Select.required = false;
+            numberDefects9_R_Input.required = false;
+        }
+    });
+
+    // 不良数9_Rが変更されたときのイベントリスナーを追加
+    numberDefects9_R_Input.addEventListener('input', function () {
+        // 不良数9_Rの入力値を取得
+        var inputNumberDefects9_R = numberDefects9_R_Input.value;
+
+        // 不良数9_Rが入力された場合、関連する不良分類コード9の選択と不良数9の入力を必須にする
+        if (inputNumberDefects9_R) {
+            defectClassificationCode9Select.required = true;
+            numberDefects9Input.required = true;
+        } else {
+            // 不良数9_Rが未入力になった場合、関連する不良分類コード9の選択と不良数9の入力を必須解除
+            defectClassificationCode9Select.required = false;
+            numberDefects9Input.required = false;
         }
     });
 
     // 初期値が存在する場合は初回チェックを行う
     if (defectClassificationCode9Select.value) {
         numberDefects9Input.required = true;
+        numberDefects9_R_Input.required = true;
     }
 
     if (numberDefects9Input.value) {
         defectClassificationCode9Select.required = true;
+        numberDefects9_R_Input.required = true;
+    }
+
+    if (numberDefects9_R_Input.value) {
+        defectClassificationCode9Select.required = true;
+        numberDefects9Input.required = true;
     }
 });
 
-// 重複を防ぐための関数
+//重複を防ぐための関数
 function preventDuplicate(selection) {
     // 選択された値
     var selectedValue = selection.value;
@@ -1132,7 +1318,7 @@ function preventDuplicate(selection) {
     }
 }
 
-// イベントリスナーを追加
+//イベントリスナーを追加
 document.getElementById('defectclassificationcode4').addEventListener('change', function () {
     preventDuplicate(this);
 });
@@ -1157,45 +1343,69 @@ document.getElementById('defectclassificationcode9').addEventListener('change', 
     preventDuplicate(this);
 });
 
-<!-- 不良数1から9までのフィールドに入力があると自動的に合計値が計算され、合計不良数フィールドに反映 -->
+<!-- LR:不良数1から9までのフィールドに入力があると自動的に合計値が計算され、合計不良数フィールドに反映 -->
+var defectNumberInputs_LH = document.querySelectorAll('.defect-number');
+var defectNumberInputs_RH = document.querySelectorAll('.defect-number_R');
 
-//不良数の合計を計算する関数
-function calculateTotal() {
-    var total = 0;
-    // 不良数の各フィールドの値を取得して合計に加算する
-    for (var i = 1; i <= 9; i++) {
-        var defectNumber = document.getElementById("numberdefects" + i).value;
-        if (!isNaN(defectNumber) && defectNumber !== "") {
-            total += parseInt(defectNumber);
+function calculateTotal_LH() {
+    var total_LH = 0;
+    for (var i = 0; i < defectNumberInputs_LH.length; i++) {
+        var value = parseInt(defectNumberInputs_LH[i].value);
+        if (!isNaN(value)) {
+            total_LH += value;
         }
     }
-    // 計算した合計を合計不良数フィールドに表示する
-    document.getElementById("totalnumberdefects").value = total;
+    document.getElementById('totalnumberdefects').value = total_LH;
 }
 
-// 不良数フィールドの値が変更されたときに合計を再計算する
-document.addEventListener("DOMContentLoaded", function() {
-    for (var i = 1; i <= 9; i++) {
-        document.getElementById("numberdefects" + i).addEventListener("input", calculateTotal);
+function calculateTotal_RH() {
+    var total_RH = 0;
+    for (var i = 0; i < defectNumberInputs_RH.length; i++) {
+        var value = parseInt(defectNumberInputs_RH[i].value);
+        if (!isNaN(value)) {
+            total_RH += value;
+        }
     }
-});
+    document.getElementById('totalnumberdefects_R').value = total_RH;
+}
+
+for (var i = 0; i < defectNumberInputs_LH.length; i++) {
+    defectNumberInputs_LH[i].addEventListener('input', calculateTotal_LH);
+}
+
+for (var i = 0; i < defectNumberInputs_RH.length; i++) {
+    defectNumberInputs_RH[i].addEventListener('input', calculateTotal_RH);
+}
+
 
 <!-- disabled 属性を解除してフォームを送信 -->
+
 // ボタンがクリックされたときに実行される関数
 function submitForm() {
   // 不良数フィールドのdisabled属性を解除する
   document.getElementById('totalnumberdefects').removeAttribute('disabled');
+  document.getElementById('totalnumberdefects_R').removeAttribute('disabled');
   document.getElementById('defectclassificationcode1').removeAttribute('disabled');
   document.getElementById('defectclassificationcode2').removeAttribute('disabled');
   document.getElementById('defectclassificationcode3').removeAttribute('disabled');
   document.getElementById('partnumber').removeAttribute('disabled');
-  
+
   // フォームを送信する
   document.getElementById('myForm').submit();
 }
 
 <!-- 手配番号の入力文字数制限 -->
 document.getElementById('arrangementnumber').addEventListener('input', function() {
+    var input = this.value;
+    var maxLength = 6;
+    if (input.length > maxLength) {
+        this.value = input.slice(0, maxLength); // 6文字以上の部分を削除
+        alert('入力できる最大文字数は6文字です。'); // アラートを表示
+    }
+});
+
+<!-- 手配番号_Rの入力文字数制限 -->
+document.getElementById('arrangementnumber_R').addEventListener('input', function() {
     var input = this.value;
     var maxLength = 6;
     if (input.length > maxLength) {
@@ -1214,6 +1424,7 @@ document.getElementById('workmannumber').addEventListener('input', function() {
     }
 });
 
+
 <!-- SQLから品番出力 -->
 //品番選択時のイベントリスナー
 document.getElementById("partnumber").addEventListener("change", function() {
@@ -1225,8 +1436,18 @@ document.getElementById("partnumber").addEventListener("change", function() {
 document.getElementById('partnumber').addEventListener('change', function () {
     preventDuplicate(this);
 });
+//品番選択時のイベントリスナー
+document.getElementById("partnumber_R").addEventListener("change", function() {
+ const selectedPartnumber = this.value;
+ // 自動送信を行わない
+});
 
-<!-- 手配番号と品番チェックの紐付け表示処理 -->
+//イベントリスナーを追加
+document.getElementById('partnumber_R').addEventListener('change', function () {
+    preventDuplicate(this);
+});
+
+<!-- 手配番号と品番の紐付け表示処理 -->
 document.getElementById("arrangementnumber").addEventListener("change", function() {
     
     const arrangementnumber = this.value.trim();
@@ -1235,7 +1456,7 @@ document.getElementById("arrangementnumber").addEventListener("change", function
 
     console.log("Selected arrangementnumber:", arrangementnumber);
 
-    partnumberInput.value = "手配番号入力後、手配番号と合致する品番が表示されます"; // 初期化
+    partnumberInput.value = "LH(LWR):手配番号入力後、手配番号と合致する品番が表示されます"; // 初期化
     partnumberInput.disabled = true; // デフォルトで無効
     partnumberErrMessage.style.display = "none";   // エラーメッセージ非表示
 
@@ -1253,29 +1474,76 @@ document.getElementById("arrangementnumber").addEventListener("change", function
             console.log("Parsed response data:", data[0].partnumber);
             
             if (Array.isArray(data) && data.length > 0) {
-            	partnumberInput.value = data[0].partnumber; // ✅ 最初のデータを partnumber に格納
-            	partnumberErrMessage.style.display = "none"; // エラー非表示
+                partnumberInput.value = data[0].partnumber; // ✅ 最初のデータを partnumber に格納
+                partnumberErrMessage.style.display = "none"; // エラー非表示
                 
             } else {
-            	partnumberInput.value = "";
-            	partnumberErrMessage.style.display = "block"; // エラー表示
+                partnumberInput.value = "";
+                partnumberErrMessage.style.display = "block"; // エラー表示
                 
             }
         })
         .catch(error => {
             console.error('エラー:', error);
             partnumberInput.value = "";
-            partnumberInput.disabled = true; // エラー時も無効化
             partnumberErrMessage.style.display = "block";
+        });
+    }
+});
+
+
+<!-- 手配番号と品番の紐付け表示処理_R -->
+document.getElementById("arrangementnumber_R").addEventListener("change", function() {
+    
+	const arrangementnumber_R = this.value.trim();
+    const partnumber_RInput = document.getElementById("partnumber_R");
+    const partnumber_RErrMessage = document.getElementById("partnumber_R_errmessage");
+
+    console.log("Selected arrangementnumber_R:", arrangementnumber_R);
+
+    partnumber_RInput.value = "RH(UPR):手配番号入力後、手配番号と合致する品番が表示されます"; // 初期化
+    partnumber_RInput.disabled = true; // デフォルトで無効
+    partnumber_RErrMessage.style.display = "none";   // エラーメッセージ非表示
+
+    if (arrangementnumber_R) {
+        fetch('main2', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+            body: new URLSearchParams({ 'arrangementnumber_R': arrangementnumber_R })
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            console.log("Parsed response data:", data[0].partnumber_R);
+            console.log("Parsed response data:", data);
+            if (Array.isArray(data) && data.length > 0) {
+            	partnumber_RInput.value = data[0].partnumber_R; // ✅ 最初のデータを partnumber に格納
+            	partnumber_RInput.disabled = false; // 入力可能にする
+            	partnumber_RErrMessage.style.display = "none"; // エラー非表示
+                
+            } else {
+            	partnumber_RInput.value = "";
+            	partnumber_RInput.disabled = true; // 無効化
+                partnumber_RErrMessage.style.display = "block"; // エラー表示
+                
+            }
+        })
+        .catch(error => {
+            console.error('エラー:', error);
+            partnumber_RInput.value = "";
+            partnumber_RInput.disabled = true; // エラー時も無効化
+            partnumber_RErrMessage.style.display = "block";
         });
     }
 });
 
 <!-- ベトナム語と日本語切替 -->
 function toggleLanguage() {
-	
 	var arrangementnumber_label = document.getElementById("arrangementnumber_label");
 	var arrangementnumber = document.getElementById("arrangementnumber");
+	var arrangementnumber_R = document.getElementById("arrangementnumber_R");
 	// 手配番号_ラベルの翻訳変換
 	if (arrangementnumber_label.textContent === "手配番号　:") {
 		arrangementnumber_label.textContent = "Mã số chuẩn bị, sắp xếp:";
@@ -1284,16 +1552,22 @@ function toggleLanguage() {
 		arrangementnumber_label.textContent = "手配番号　:";
 		arrangementnumber_label.style.fontWeight = "bold";
 	}
-	
 	// 手配番号_メッセージの翻訳変換
-	if (arrangementnumber.placeholder  === "手配番号を入力してください") {
-    	arrangementnumber.placeholder  = "Hãy nhập mã 手配番号";
+	if (arrangementnumber.placeholder  === "LH(LWR):手配番号を入力してください") {
+    	arrangementnumber.placeholder  = "LH(LWR):Hãy nhập mã 手配番号";
     } else {
-    	arrangementnumber.placeholder  = "手配番号を入力してください";
+    	arrangementnumber.placeholder  = "LH(LWR):手配番号を入力してください";
+    }
+	// 手配番号R_メッセージの翻訳変換
+	if (arrangementnumber_R.placeholder  === "RH(UPR):手配番号を入力してください") {
+		arrangementnumber_R.placeholder  = "RH(UPR):Hãy nhập mã 手配番号";
+    } else {
+    	arrangementnumber_R.placeholder  = "RH(UPR):手配番号を入力してください";
     }
 
 	var partnumber_label = document.getElementById("partnumber_label");
 	var partnumber = document.getElementById("partnumber");
+	var partnumber_R = document.getElementById("partnumber_R");
 	// 品番_ラベルの翻訳変換
 	if (partnumber_label.textContent === "品番　　　:") {
 		partnumber_label.textContent = "Mã số sản phẩm:";
@@ -1303,22 +1577,38 @@ function toggleLanguage() {
 		partnumber_label.style.fontWeight = "bold";
 	}
 	// 品番_メッセージの翻訳変換
-	if (partnumber.placeholder  === "手配番号入力後、手配番号と合致する品番が表示されます") {
-		partnumber.placeholder  = "Sau khi nhập số đơn hàng, số sản phẩm khớp với số đơn hàng sẽ được hiển thị.";
+	if (partnumber.placeholder  === "LH(LWR):手配番号入力後、手配番号と合致する品番が表示されます") {
+		partnumber.placeholder  = "LH(LWR):Sau khi nhập số đơn hàng, số sản phẩm khớp với số đơn hàng sẽ được hiển thị.";
     } else {
-    	partnumber.placeholder  = "手配番号入力後、手配番号と合致する品番が表示されます";
+    	partnumber.placeholder  = "LH(LWR):手配番号入力後、手配番号と合致する品番が表示されます";
     }
-    
+	// 品番R_メッセージの翻訳変換
+	if (partnumber_R.placeholder  === "RH(UPR):手配番号入力後、手配番号と合致する品番が表示されます") {
+		partnumber_R.placeholder  = "RH(UPR):Sau khi nhập số đơn hàng, số sản phẩm khớp với số đơn hàng sẽ được hiển thị.";
+    } else {
+    	partnumber_R.placeholder  = "RH(UPR):手配番号入力後、手配番号と合致する品番が表示されます";
+    }
+
 	// 品番が見つからない場合のメッセージの翻訳
 	const partnumberErrMessage = document.getElementById("partnumber_errmessage");
 	if (partnumberErrMessage) {
-	    if (partnumberErrMessage.innerText === "手配番号と合致する品番がありません") {
-	    	partnumberErrMessage.innerText = "Không có số sản phẩm khớp với số đơn hàng.";
+	    if (partnumberErrMessage.innerText === "LH(LWR):手配番号と合致する品番がありません") {
+	    	partnumberErrMessage.innerText = "LH(LWR):Không có số sản phẩm khớp với số đơn hàng.";
 	    } else {
-	    	partnumberErrMessage.innerText = "手配番号と合致する品番がありません";
+	    	partnumberErrMessage.innerText = "LH(LWR):手配番号と合致する品番がありません";
 	    }
 	}
-
+	
+	// 品番Rが見つからない場合のメッセージの翻訳
+	const partnumber_RErrMessage = document.getElementById("partnumber_R_errmessage");
+	if (partnumber_RErrMessage) {
+	    if (partnumber_RErrMessage.innerText === "RH(UPR):手配番号と合致する品番がありません") {
+	    	partnumber_RErrMessage.innerText = "RH(UPR):Không có số sản phẩm khớp với số đơn hàng.";
+	    } else {
+	    	partnumber_RErrMessage.innerText = "RH(UPR):手配番号と合致する品番がありません";
+	    }
+	}
+    
     var workperformancedate_label = document.getElementById("workperformancedate_label");
     // 作業実績日_ラベルの翻訳変換
     if (workperformancedate_label.textContent === "作業実績日:") {
@@ -1424,6 +1714,7 @@ function toggleLanguage() {
 
     var numbernodefectiveproducts_label = document.getElementById("numbernodefectiveproducts_label");
     var numbernodefectiveproducts = document.getElementById("numbernodefectiveproducts");
+    var numbernodefectiveproducts_R = document.getElementById("numbernodefectiveproducts_R");
     // 良品数_ラベルの翻訳変換
     if (numbernodefectiveproducts_label.textContent === "良品数　　:") {
     	numbernodefectiveproducts_label.textContent = "Số hàng tốt:";
@@ -1433,14 +1724,21 @@ function toggleLanguage() {
     	numbernodefectiveproducts_label.style.fontWeight = "bold";
     }
     // 良品数_メッセージの翻訳変換
-    if (numbernodefectiveproducts.placeholder  === "良品数を入力してください") {
-    	numbernodefectiveproducts.placeholder  = "Hãy nhập số hàng tốt";
+    if (numbernodefectiveproducts.placeholder  === "LH(LWR):良品数を入力してください") {
+    	numbernodefectiveproducts.placeholder  = "LH(LWR):Hãy nhập số hàng tốt";
     } else {
-    	numbernodefectiveproducts.placeholder  = "良品数を入力してください";
+    	numbernodefectiveproducts.placeholder  = "LH(LWR):良品数を入力してください";
+    }
+	// 良品R_メッセージの翻訳変換
+	if (numbernodefectiveproducts_R.placeholder  === "RH(UPR):良品数を入力してください") {
+		numbernodefectiveproducts_R.placeholder  = "RH(UPR):Hãy nhập số hàng tốt";
+    } else {
+    	numbernodefectiveproducts_R.placeholder  = "RH(UPR):良品数を入力してください";
     }
 
     var totalnumberdefects_label = document.getElementById("totalnumberdefects_label");
     var totalnumberdefects = document.getElementById("totalnumberdefects");
+    var totalnumberdefects_R = document.getElementById("totalnumberdefects_R");
     // 合計不良数_ラベルの翻訳変換
     if (totalnumberdefects_label.textContent === "合計不良数:") {
     	totalnumberdefects_label.textContent = "Tổng số hàng lỗi:";
@@ -1450,10 +1748,16 @@ function toggleLanguage() {
     	totalnumberdefects_label.style.fontWeight = "bold";
     }
     // 合計不良数_メッセージの翻訳変換
-    if (totalnumberdefects.placeholder  === "不良数1～9を入力してください") {
-    	totalnumberdefects.placeholder  = "Hãy nhập số hàng lỗi 1 đến 9";
+    if (totalnumberdefects.placeholder  === "LH(LWR):不良数1～9を入力してください") {
+    	totalnumberdefects.placeholder  = "LH(LWR):Hãy nhập số hàng lỗi 1 đến 9";
     } else {
-    	totalnumberdefects.placeholder  = "不良数1～9を入力してください";
+    	totalnumberdefects.placeholder  = "LH(LWR):不良数1～9を入力してください";
+    }
+    // 合計不良数R_メッセージの翻訳変換
+    if (totalnumberdefects_R.placeholder  === "RH(UPR):不良数1～9を入力してください") {
+    	totalnumberdefects_R.placeholder  = "RH(UPR):Hãy nhập số hàng lỗi 1 đến 9";
+    } else {
+    	totalnumberdefects_R.placeholder  = "RH(UPR):不良数1～9を入力してください";
     }
     
     var remarks_label = document.getElementById("remarks_label");
@@ -1478,6 +1782,7 @@ function toggleLanguage() {
 
     var numberdefects1_label = document.getElementById("numberdefects1_label");
     var numberdefects1 = document.getElementById("numberdefects1");
+    var numberdefects1_R = document.getElementById("numberdefects1_R");
     // 不良数1ラベルの翻訳変換
     if (numberdefects1_label.textContent === "不良数1:") {
     	numberdefects1_label.textContent = "Số hàng lỗi 1:";
@@ -1487,10 +1792,16 @@ function toggleLanguage() {
     	numberdefects1_label.style.fontWeight = "bold";
     }
     // 不良数1_メッセージの翻訳変換
-    if (numberdefects1.placeholder  === "不良数を入力してください") {
-    	numberdefects1.placeholder  = "Hãy nhập số hàng lỗi";
+    if (numberdefects1.placeholder  === "LH(LWR):不良数を入力してください") {
+    	numberdefects1.placeholder  = "LH(LWR):Hãy nhập số hàng lỗi";
     } else {
-    	numberdefects1.placeholder  = "不良数を入力してください";
+    	numberdefects1.placeholder  = "LH(LWR):不良数を入力してください";
+    }
+    // 不良数1R_メッセージの翻訳変換
+    if (numberdefects1_R.placeholder  === "RH(UPR):不良数を入力してください") {
+    	numberdefects1_R.placeholder  = "RH(UPR):Hãy nhập số hàng lỗi";
+    } else {
+    	numberdefects1_R.placeholder  = "RH(UPR):不良数を入力してください";
     }
 
     var defectclassificationcode2_label = document.getElementById("defectclassificationcode2_label");
@@ -1505,6 +1816,7 @@ function toggleLanguage() {
 
     var numberdefects2_label = document.getElementById("numberdefects2_label");
     var numberdefects2 = document.getElementById("numberdefects2");
+    var numberdefects2_R = document.getElementById("numberdefects2_R");
     // 不良数2_ラベルの翻訳変換
     if (numberdefects2_label.textContent === "不良数2:") {
     	numberdefects2_label.textContent = "Số hàng lỗi 2:";
@@ -1514,10 +1826,16 @@ function toggleLanguage() {
     	numberdefects2_label.style.fontWeight = "bold";
     }
     // 不良数2_メッセージの翻訳変換
-    if (numberdefects2.placeholder  === "不良数を入力してください") {
-    	numberdefects2.placeholder  = "Hãy nhập số hàng lỗi";
+    if (numberdefects2.placeholder  === "LH(LWR):不良数を入力してください") {
+    	numberdefects2.placeholder  = "LH(LWR):Hãy nhập số hàng lỗi";
     } else {
-    	numberdefects2.placeholder  = "不良数を入力してください";
+    	numberdefects2.placeholder  = "LH(LWR):不良数を入力してください";
+    }
+    // 不良数2R_メッセージの翻訳変換
+    if (numberdefects2_R.placeholder  === "RH(UPR):不良数を入力してください") {
+    	numberdefects2_R.placeholder  = "RH(UPR):Hãy nhập số hàng lỗi";
+    } else {
+    	numberdefects2_R.placeholder  = "RH(UPR):不良数を入力してください";
     }
 
     var defectclassificationcode3_label = document.getElementById("defectclassificationcode3_label");
@@ -1532,6 +1850,7 @@ function toggleLanguage() {
 
     var numberdefects3_label = document.getElementById("numberdefects3_label");
     var numberdefects3 = document.getElementById("numberdefects3");
+    var numberdefects3_R = document.getElementById("numberdefects3_R");
     // 不良数3_ラベルの翻訳変換
     if (numberdefects3_label.textContent === "不良数3:") {
     	numberdefects3_label.textContent = "Số hàng lỗi 3:";
@@ -1541,10 +1860,16 @@ function toggleLanguage() {
     	numberdefects3_label.style.fontWeight = "bold";
     }
     // 不良数3_メッセージの翻訳変換
-    if (numberdefects3.placeholder  === "不良数を入力してください") {
-    	numberdefects3.placeholder  = "Hãy nhập số hàng lỗi";
+    if (numberdefects3.placeholder  === "LH(LWR):不良数を入力してください") {
+    	numberdefects3.placeholder  = "LH(LWR):Hãy nhập số hàng lỗi";
     } else {
-    	numberdefects3.placeholder  = "不良数を入力してください";
+    	numberdefects3.placeholder  = "LH(LWR):不良数を入力してください";
+    }
+    // 不良数3R_メッセージの翻訳変換
+    if (numberdefects3_R.placeholder  === "RH(UPR):不良数を入力してください") {
+    	numberdefects3_R.placeholder  = "RH(UPR):Hãy nhập số hàng lỗi";
+    } else {
+    	numberdefects3_R.placeholder  = "RH(UPR):不良数を入力してください";
     }
 
     var defectclassificationcode4_label = document.getElementById("defectclassificationcode4_label");

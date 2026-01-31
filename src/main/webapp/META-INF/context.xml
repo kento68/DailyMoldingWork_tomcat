@@ -20,15 +20,15 @@
 
  <!-- url: The JDBC connection url for connecting to your MySQL database. -->
 
-  <Resource
+<Resource
       name="jdbc/jsp"
       auth="Container"
       type="javax.sql.DataSource"
       driverClassName="com.mysql.jdbc.Driver"
-      url="jdbc:mysql://localhost:3307/dailymoldingwork"
+      url="jdbc:mysql://localhost:3306/dailymoldingwork"
       connectionProperties="autoReconnect=true;verifyServerCertificate=false;useSSL=false;requireSSL=false;useUnicode=true;characterEncoding=UTF-8;"
-      username="root"
-      password="T120353t120353"
+      username="kento68"
+      password="t120353120353"
       validationQuery="select 1"/>
 </Context>
 
@@ -37,7 +37,17 @@
 <!-- username="root" -->
 <!-- username="T120353t120353" -->
 
-                 <!-- Raspberry Pi -->
+               <!-- DESKTOP-KBUH9GC -->
+<!-- url="jdbc:mysql://localhost/dailymoldingwork" -->
+<!-- username="root" -->
+<!-- username="T120353t120353" -->
+
+                 <!-- Raspberry Pi(192.168.10.118 ) -->
+<!-- url="jdbc:mysql://localhost:3306/dailymoldingwork" -->
+<!-- username="kakuichi" -->
+<!-- password="kakukaku" -->
+
+                 <!-- Raspberry Pi(192.168.10.122 ) -->
 <!-- url="jdbc:mysql://localhost:3306/dailymoldingwork" -->
 <!-- username="kento68" -->
 <!-- password="t120353120353" -->

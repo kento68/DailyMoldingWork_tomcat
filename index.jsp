@@ -19,4 +19,4 @@
         <input type="submit" value="Login">
 
 </form>
-
+<jsp:include page="/footer.jsp"/>
